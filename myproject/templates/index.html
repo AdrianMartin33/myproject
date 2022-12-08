@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h2>{{ the_title }}</h2>
+
+    <form method="post" action="/login">
+    <p>Choose an option:</p>
+    <p><input value="LOGIN" type="SUBMIT"></p>
+    </form>
+    <form method="post" action="/register">
+        <p><input value="REGISTER" type="SUBMIT"></p>
+    </form>
+    <form method="post" action="/anonymous">
+      <p><input value="CONTINUE WITHOUT LOGIN" type="SUBMIT"></p>
+    </form>
+{% endblock %}

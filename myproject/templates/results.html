@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h2>{{ the_title }}</h2>
+
+<p>You submitted the following data:</p>
+<table>
+    <tr><td>Phrase:</td><td>{{ the_phrase }}</td></tr>
+    <tr><td>Letters:</td><td>{{ the_letters }}</td></tr>
+</table>
+
+<p>When "{{ the_phrase }}" is search for "{{ the_letters }}",
+    the following results are founded:</p>
+<h3>{{ the_results }}</h3>
+<form  action="/">
+    <p>Press if you want to return to initial page:</p>
+    <p><input value="Restart" type="SUBMIT"></p>
+</form>
+<form method="post" action="/search">
+    <p>Press if you want to do another search:</p>
+    <p><input value="Search again" type="SUBMIT"></p>
+</form>
+<p>This is the current ranking of found letters:</p>
+<h3>{{ the_statistics }}</h3>
+
+{% endblock %}

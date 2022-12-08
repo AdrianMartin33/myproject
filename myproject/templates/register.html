@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h2>{{ the_title }}</h2>
+
+    <form method="post" action="/search">
+    <table>
+        <p>
+           Introduce you username and password:
+        </p>
+        <tr><td>Username:</td><td><input name="Username" type="TEXT" width="60"></td></tr>
+        <tr><td>Password:</td><td><input name="Password" type="TEXT" width="60"></td></tr>
+        <tr><td>Password:</td><td><input name="Password2" type="TEXT" width="60"></td></tr>
+    </table>
+    <p><input value="REGISTER" type="SUBMIT"></p>
+    </form>
+{% endblock %}

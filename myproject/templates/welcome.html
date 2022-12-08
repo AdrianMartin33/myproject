@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h2>{{ the_title }}</h2>
+
+    <form method="post" action="/search">
+    <table>
+        <p>
+            This is your data:
+        </p>
+        <tr><td>Username:</td><td>{{ the_username }}</td></tr>
+    </table>
+    <p>When you are ready, click start button:</p>
+    <p><input value="START" type="SUBMIT"></p>
+    </form>
+{% endblock %}
