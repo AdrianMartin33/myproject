@@ -24,6 +24,16 @@ cursor.execute("SELECT * FROM athletes WHERE name=? and dob=?", ('Adrian', '26/0
 the_current_id = cursor.fetchone()
 cursor.execute("INSERT INTO TIMING_DATA (athlete_id, value)VALUES (?,?)", (the_current_id[0], '120'))
 
-
 connection.commit()
 connection.close()
+
+cursor.execute("create table log( id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE NOT NULL,"
+               "ts timestamp default current_timestamp,"
+               "phrase TEXT NOT NULL,"
+               "letter  TEXT NOT NULL,"
+               "ip TEXT NOT NULL,"
+               "browser_string TEXT NOT NULL,"
+               "results TEXT NOT NULL,"
+               "username TEXT NOT NULL,"
+               "FOREIGN KEY(username) references players(username))"
+               )

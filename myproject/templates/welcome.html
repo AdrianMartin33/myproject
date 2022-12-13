@@ -3,12 +3,12 @@
 {% block body %}
 <h2>{{ the_title }}</h2>
 
-    <form method="post" action="/search">
+    <form method="post" action="/search3">
     <table>
         <p>
             This is your data:
         </p>
-        <tr><td>Username:</td><td>{{ the_username }}</td></tr>
+        <tr><td>Username:</td><td><td><input readonly name="username" type="TEXT" value={{ the_username }}></td></tr>
     </table>
     <p>When you are ready, click start button:</p>
     <p><input value="START" type="SUBMIT"></p>
